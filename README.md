@@ -73,3 +73,10 @@ add -std=c11
 
 make
 
+While compile error of fontconfig can't find symbols
+
+add -L/usr/lib64 -lxml2 to vlc-3.0.6/contrib/mips64el-neokylin-linux/lib/pkgconfig/libbluray.pc
+
+while compile error of freetype using fontconfig can't find xml symbols
+
+get vlc-3.0.6-onmips/replace_while_error/libfreetype_plugin.la and copy to vlc_3.0.6/modules/
