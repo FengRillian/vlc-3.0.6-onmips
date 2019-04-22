@@ -2,7 +2,7 @@ vlc-3.0.6-onmips README.md.
 vld-3.0.6 package can be got from https://github.com/videolan/vlc .
 This document is for vlc compile on Loongson platform.
 
-####Environment Prepare .
+== Environment Prepare .
 1. pkg-config 0.29.2
 Download from: https://pkg-config.freedesktop.org/releases/
 ./configure --build=mips64el-redhat-linux --with-internal-glib
@@ -31,7 +31,7 @@ pip3 install --user meson
 download from: https://xcb.freedesktop.org/dist/
 configure and make install 
 
-####Start_compile third party softwares .
+== Start_compile third party softwares .
 cd vlc-3.0.6/contrib/
 mkdir native
 cd native
@@ -42,7 +42,7 @@ While libplacebo compile have error:
 ./contrib/native/libplacebo/Makefile
 add -std=c11
 
-####Compile vlc-3.0.6 .
+== Compile vlc-3.0.6 .
 ./configure --enable-ogg --enable-matroska --enable-wma-fixed --enable-mpg123 --enable-merge-ffmpeg --enable-aom --enable-dav1d --enable-vpx --enable-twolame --enable-a52 --enable-dca --enable-libmpeg2 --enable-vorbis --enable-tremor --enable-speex --enable-opus --enable-spatialaudio --enable-theora --enable-oggspots --enable-x265 --enable-x264 --prefix=/home/**/install_dir/
 make
 
