@@ -42,7 +42,7 @@ Make sure that /usr/bin/python link to python3.5
 
 meson-0.47.0
 
-pip3 install --user meson
+sudo /usr/local/bin/python3 setup.py install
 
 5. libpthread-stubs
 
@@ -50,9 +50,14 @@ download from: https://xcb.freedesktop.org/dist/
 
 configure and make install 
 
+6. ninja
+download ninja 1.5.5
+./configure.py --bootstrap
+sudo cp ninja /usr/bin/
+
 ## Start_compile third party softwares .
 
-cd vlc-3.0.6/contrib/
+1. cd vlc-3.0.6/contrib/
 
 mkdir native
 
@@ -60,7 +65,9 @@ cd native
 
 ../bootstrap
 
-make
+2. replace files in replace_before_compile/contrib/src to related place.
+
+3. make
 
 While libplacebo compile have error:
 
@@ -68,6 +75,7 @@ While libplacebo compile have error:
 
 add -std=c11
 
+4.
 ## Compile vlc-3.0.6 .
 ./configure --enable-ogg --enable-matroska --enable-wma-fixed --enable-mpg123 --enable-merge-ffmpeg --enable-aom --enable-dav1d --enable-vpx --enable-twolame --enable-a52 --enable-dca --enable-libmpeg2 --enable-vorbis --enable-tremor --enable-speex --enable-opus --enable-spatialaudio --enable-theora --enable-oggspots --enable-x265 --enable-x264 --prefix=/home/**/install_dir/
 
