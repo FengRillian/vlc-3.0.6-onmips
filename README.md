@@ -51,8 +51,11 @@ download from: https://xcb.freedesktop.org/dist/
 configure and make install 
 
 6. ninja
+
 download ninja 1.5.5
+
 ./configure.py --bootstrap
+
 sudo cp ninja /usr/bin/
 
 ## Start_compile third party softwares .
