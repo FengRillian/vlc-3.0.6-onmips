@@ -74,7 +74,7 @@ cd native
 
 While libplacebo compile have error:
 
-./contrib/native/libplacebo/Makefile
+./contrib/native/libplacebo/Makefile line:14
 
 add -std=c11
 
